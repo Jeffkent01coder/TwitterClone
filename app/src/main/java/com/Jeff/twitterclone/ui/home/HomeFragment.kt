@@ -8,6 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.DividerItemDecoration
 import com.Jeff.twitterclone.R
 import com.Jeff.twitterclone.adapter.RvAdapter
 import com.Jeff.twitterclone.databinding.FragmentHomeBinding
@@ -38,6 +39,12 @@ class HomeFragment : Fragment() {
         tweetAdapter = RvAdapter(tweets)
         binding.rvTweet.apply{
             adapter = tweetAdapter
+            addItemDecoration(
+                DividerItemDecoration(
+                    requireActivity(),
+                    DividerItemDecoration.VERTICAL
+                )
+            )
         }
 
         return root
