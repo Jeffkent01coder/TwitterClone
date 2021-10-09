@@ -9,9 +9,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.Jeff.twitterclone.R
+import com.Jeff.twitterclone.adapter.RvAdapter
 import com.Jeff.twitterclone.databinding.FragmentHomeBinding
+import com.Jeff.twitterclone.model.Data
 
 class HomeFragment : Fragment() {
+
+    private lateinit var tweetAdapter: RvAdapter
 
     private lateinit var homeViewModel: HomeViewModel
     private var _binding: FragmentHomeBinding? = null
@@ -30,11 +34,12 @@ class HomeFragment : Fragment() {
 
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+        val tweets = Data.getTweets()
+        tweetAdapter = RvAdapter(tweets)
+        binding.rvTweet.apply{
+            adapter = tweetAdapter
+        }
 
-        val textView: TextView = binding.textHome
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
         return root
     }
 

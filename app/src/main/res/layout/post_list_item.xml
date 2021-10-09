@@ -11,7 +11,8 @@
         android:padding="10dp"
         android:orientation="horizontal">
 
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_profileImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/j"
@@ -25,6 +26,7 @@
             android:layout_marginStart="20dp">
 
             <TextView
+                android:id="@+id/tv_userName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="20sp"
@@ -32,6 +34,7 @@
                 android:textStyle="bold"/>
 
             <TextView
+                android:id="@+id/tv_userTag"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textSize="18sp"
@@ -45,6 +48,7 @@
     </LinearLayout>
 
     <TextView
+        android:id="@+id/tv_postDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textStyle="normal"
@@ -55,9 +59,9 @@
         android:text="Hello My Guys I have just got my new Beast"/>
 
     <ImageView
+        android:id="@+id/iv_post"
         android:layout_width="match_parent"
         android:layout_height="200dp"
-        android:src="@drawable/n"
         android:scaleType="centerCrop"
         android:layout_margin="20dp"/>
 
@@ -69,12 +73,14 @@
        >
 
         <ImageView
+            android:id="@+id/iv_reply"
             android:layout_marginStart="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_reply"/>
         <TextView
+            android:id="@+id/tv_reply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -83,6 +89,7 @@
             android:text="2K" />
 
         <ImageView
+            android:id="@+id/iv_retweet"
             android:layout_marginStart="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -90,6 +97,7 @@
             android:src="@drawable/ic_retweet"/>
 
         <TextView
+            android:id="@+id/tv_retweet"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -98,12 +106,14 @@
             android:text="200" />
 
         <ImageView
+            android:id="@+id/iv_like"
             android:layout_marginStart="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_like_false"/>
         <TextView
+            android:id="@+id/tv_like"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -112,18 +122,20 @@
             android:text="2K" />
 
         <ImageView
+            android:id="@+id/iv_share"
             android:layout_marginStart="20dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:src="@drawable/ic_share"/>
         <TextView
+            android:id="@+id/tv_share"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:layout_gravity="center_vertical"
             android:layout_margin="5dp"
-           android:text="2K" />
+           android:text="3.1M" />
 
     </LinearLayout>
 
